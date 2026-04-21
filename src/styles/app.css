@@ -1,0 +1,150 @@
+:root {
+  color-scheme: light;
+  font-family: 'Segoe UI', 'Noto Sans', sans-serif;
+  background: #f2f4f7;
+  color: #151821;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f8 100%);
+  color: #151821;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #d7dce5;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+form,
+fieldset {
+  display: grid;
+  gap: 0.5rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid #6f7d91;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #151821;
+}
+
+button {
+  width: fit-content;
+  border: 1px solid #0b4a8b;
+  background: #0b4a8b;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid #e79b00;
+  outline-offset: 2px;
+}
+
+.tasks-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.task-item {
+  border: 1px solid #d7dce5;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.task-item-actions,
+.filters-actions,
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.toast {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.toast-success {
+  background: #eaf7ee;
+  border-color: #1f7a36;
+  color: #135425;
+}
+
+.toast-error {
+  background: #ffeceb;
+  border-color: #b3261e;
+  color: #7d1916;
+}
+
+.toast-loading {
+  background: #e9f1fb;
+  border-color: #0b4a8b;
+  color: #083463;
+}
+
+@media (max-width: 700px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    width: 100%;
+  }
+}
